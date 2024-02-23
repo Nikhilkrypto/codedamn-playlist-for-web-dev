@@ -1,0 +1,18 @@
+You have been given a code snippet in the index.js file. You can view the file in the editor.
+
+Running this code gives an error, instead of logging the text, can you find out what's the bug with this code and fix it. You should try to add as minimal characters as possible to fix this.
+
+Hint: Think what happens when sqaure brackets are used after a string
+
+
+
+// Fix the Bug!
+
+const company = "Nike";//here
+const tagline = "Just do it";//here
+
+[company, tagline].forEach(
+	(el) => console.log(el)
+);
+
+here just error in this code is theere is missing of semicolon
