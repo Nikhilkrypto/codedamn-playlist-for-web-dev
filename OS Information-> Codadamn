@@ -1,0 +1,32 @@
+//chalanges
+Export the 'os' module - Make sure to import and export the 'os' Node.js module using ESM syntax.
+
+Get the operating system name - Create a function getOsName() that returns the operating system name using os.type(). Export the function.
+
+Calculate the free memory percentage - Create a function getFreeMemoryPercentage() that returns the percentage of free system memory (in decimal format, e.g., 0.5 for 50%). Use os.freemem() and os.totalmem() functions. Export the function.
+
+Get the system uptime in minutes - Create a function getUptimeInMinutes() that returns the system uptime in minutes (rounded to the nearest integer). Use the os.uptime() function. Export the function.
+
+// write your code here
+import os from 'os'
+
+function getOsName()
+{
+    return os.type();
+}
+
+function getFreeMemoryPercentage()
+{
+    const memoryPercen=os.freemem();
+    const totalMemory=os.totalmem();
+    return (memoryPercen/totalMemory);
+}
+function getUptimeInMinutes()
+{
+    const getMins=os.uptime();
+    // return getMins;
+    return Math.round(getMins/60);
+}
+export{getOsName};
+export{getFreeMemoryPercentage};
+export{getUptimeInMinutes};
