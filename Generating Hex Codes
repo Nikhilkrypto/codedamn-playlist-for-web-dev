@@ -1,0 +1,24 @@
+/**
+ * Returns a 6 digit hexCode prepended with '#' as a valid color code
+ * @returns {string} hexCode
+ */
+export function generateRandomHexCode() {
+	let hexCode = "#";
+
+	for (let i = 0; i < 3; i++) {
+		hexCode += Math.floor(Math.random() * 256).toString(16).padStart(2,'0');
+	}
+
+	return hexCode;
+}
+
+// You can log the results of the function to debug
+// Sample Strings
+for (let i = 0; i < 100; i++) {
+	console.log(generateRandomHexCode());
+}
+
+why we're using padstart =due to from 0-15 the number is a single digit number and dur to that it will result into less than 6 digit number and now we have to put 0 in the prefix for that so we're doing taht
+to method 
+i> padstart used to store some result at the prefix of a string until the total length upto a given sequence 
+syntax=string.padstart(length of numbers which we want to put ,'string in place of that');
